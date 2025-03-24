@@ -18,10 +18,12 @@ from django.contrib import admin
 from django.urls import path
 
 
-from Lansator.views import zile_pana_la_lansare, nume_racheta_view
+from Lansator.views import zile_pana_la_lansare, nume_racheta_view, racheta_template_view, today_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('lansare/', zile_pana_la_lansare),
     path('nume/', nume_racheta_view),
+    path('', racheta_template_view),
+    path('azi', today_view),
 ]
