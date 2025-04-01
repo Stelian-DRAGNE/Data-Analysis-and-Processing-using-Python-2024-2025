@@ -22,4 +22,5 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('capitalizare/', include('Capitalizare.urls')),
+    path('parola/', include('Parola.urls')),
 ]
