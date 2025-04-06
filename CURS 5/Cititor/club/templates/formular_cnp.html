@@ -6,12 +6,13 @@
     <title>Document</title>
 </head>
 <body>
-    <h1> Valideaza CNP-ul </h1>
-    <form action="" method="get">
 
+    <h1> Valideaza CNP-ul </h1>
+
+    <form action="rezultat" method="post">
+        {% csrf_token %}
         <input type="text" name='cnp' id=''>
         <input type="submit" value="Valideaza">
-
     </form>
 
 </body>
