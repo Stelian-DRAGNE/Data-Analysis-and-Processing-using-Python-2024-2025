@@ -10,6 +10,7 @@
     <h1> Rock Paper Scissors </h1>
 
     <form action="" method="post">
+
         {% csrf_token %}
         <select name="chosen" id="">
             <option value="1">Rock</option>
@@ -19,5 +20,14 @@
         <button type="submit">Trimite</button>
 
     </form>
+
+    
+    {% if client %}
+        <p> {{ client }} </p>
+        <p> {{server}} </p>
+        <p> {{rezultat}} </p>
+    {% endif %}
+        
+
 </body>
 </html>
