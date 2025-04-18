@@ -6,12 +6,22 @@ class Optiuni(enum.Enum):
     Rock = 1
     Paper = 2
     Scissors = 3
+    Lizard = 4
+    Spock = 5
 
     def __str__(self):
         return self.name
 
-ales = Optiuni(3)
-print(ales)
+    @classmethod
+    def values(self):
+        return [op.value for op in Optiuni]
+
+
+print (Optiuni.values())
+
+
+# ales = Optiuni(3)
+# print(ales)
 
 # print(Optiuni.Rock)
 # print(Optiuni.Rock.value)
