@@ -16,9 +16,14 @@
             <option value="2">Paper</option>
             <option value="3">Scissors</option>
         </select>
-
         <button type="submit">Trimite</button>
-
     </form>
+
+    {% if client %}
+        <p> {{client}} </p>
+        <P> {{server}} </P>
+        <p> {{rezultat}} </p>
+    {% endif %}
+
 </body>
 </html>
