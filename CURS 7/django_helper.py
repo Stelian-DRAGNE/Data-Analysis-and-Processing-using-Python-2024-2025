@@ -72,6 +72,19 @@ def _add_app_to_installed_apps(app_name = "test_app", project_name = "test_proje
     with open("settings.py", "w") as fwriter:
             fwriter.writelines(settings_content)
 
+def _create_templates_folder(app_name = "test_app", project_name = "test_project"):
+    cwd = os.getcwd()
+    os.chdir(os.path.join(cwd, project_name, app_name))
+
+    TEMPLATES = "templates"
+    os.makedirs(TEMPLATES, exist_ok=True)
+
+
+
+
+
+
+
 def demo_enumerate():
     lista_mea = ["Maria", "Ion", "Gheorghe", "Vasile"]
     for index, element in enumerate(lista_mea):
@@ -94,5 +107,7 @@ if __name__ == "__main__":
     # print(os.getcwd())
 
     # _add_app_to_installed_apps()
-    
-    demo_enumerate()
+
+    # demo_enumerate()
+
+    _create_templates_folder()
