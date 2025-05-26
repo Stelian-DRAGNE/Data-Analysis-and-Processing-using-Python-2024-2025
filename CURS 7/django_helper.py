@@ -79,12 +79,6 @@ def _create_templates_folder(app_name = "test_app", project_name = "test_project
     TEMPLATES = "templates"
     os.makedirs(TEMPLATES, exist_ok=True)
 
-
-
-
-
-
-
 def demo_enumerate():
     lista_mea = ["Maria", "Ion", "Gheorghe", "Vasile"]
     for index, element in enumerate(lista_mea):
@@ -93,8 +87,6 @@ def demo_enumerate():
             lista_mea.insert(index, "Florina")
             break
     print(lista_mea)
-
-
 
 if __name__ == "__main__":
 
