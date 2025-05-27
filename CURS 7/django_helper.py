@@ -123,15 +123,21 @@ def demo_enumerate():
 
 if __name__ == "__main__":
 
-    # create_project()
+    # create_project("ecommerce")
+    # create_application("blog", "ecommerce")
+    # _add_app_to_installed_apps("blog", "ecommerce")
+    _create_app_url_file("blog", "ecommerce")
+    
+    
+    
     # time.sleep(3)
-    # create_application()
+
 
     # delete_project()
 
     # print(os.getcwd())
 
-    # _add_app_to_installed_apps()
+
 
     # demo_enumerate()
 
@@ -139,4 +145,4 @@ if __name__ == "__main__":
 
     # _create_app_url_file()
 
-    _link_app_in_project_url_file()
+    # _link_app_in_project_url_file()
