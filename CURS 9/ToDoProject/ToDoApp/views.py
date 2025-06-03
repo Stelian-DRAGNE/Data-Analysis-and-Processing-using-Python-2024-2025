@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import ToDoItem
 
 # Create your views here.
@@ -10,6 +10,20 @@ def todo_list_view(request):
 	}
     return render(request, 'todo_list.html', context)
 
+
 def todo_details_view(request):
 	context = {}
 	return render(request, 'todo_details.html', context)
+
+
+def create_todo_view(request):
+    if request.method == "POST":
+        print("Ai primit:", request.POST)
+        
+        new_task = request.POST.get("task")
+        if new_task:
+            ToDoItem.objects.create(name = new_task)
+            return redirect("todo_list_url")
+
+    context = {}
+    return render(request, 'create_todo.html', context)

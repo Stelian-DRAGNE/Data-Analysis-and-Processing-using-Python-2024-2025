@@ -14,6 +14,12 @@
         {% endfor %}
     </ol>
 
+    <button onclick = "document.location.href = '{% url 'create_todo_url' %}'">Adauga task</button>
 
+    <a href = "{% url 'create_todo_url' %}"> Adauga task</a>
+
+    <button><a href = "{% url 'create_todo_url' %}"> Adauga task</a></button>
+
+    <a href = "{% url 'create_todo_url' %}"> <button>Adauga task</button> </a>
 </body>
 </html>
